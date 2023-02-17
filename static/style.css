@@ -1,0 +1,13 @@
+body {
+    background-color: #D0F0C0;
+}
+
+hr {
+    border-top: 5px solid #228C22;
+    max-width: 25%;
+}
+
+.navbar {
+    background-color: #228C22;
+}
+

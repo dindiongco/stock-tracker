@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block title %}Home{% endblock %} {% block content
+%}
+<form method="POST">
+  <div class="container mt-5 text-success-emphasis">
+    <label for="ticker" class="form-label"
+      >Enter the Stock ticker of the stock you want to see the information
+      for:</label
+    >
+    <input
+      type="text"
+      class="form-control text-success-emphasis"
+      id="ticker"
+      name="ticker"
+      placeholder="Example: IBM"
+    />
+    <select
+      class="form-select mt-3 text-success-emphasis"
+      name="option"
+      aria-label="Default select example"
+    >
+      <option selected>Choose Date range</option>
+      <option value="daily">Daily</option>
+      <option value="weekly">Weekly</option>
+      <option value="monthly">Monthly</option>
+    </select>
+    <button type="submit" class="mt-2 btn btn-success">Submit</button>
+  </div>
+</form>
+{% endblock %}
