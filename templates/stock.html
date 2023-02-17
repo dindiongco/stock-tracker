@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block title %}{{stock}}{% endblock %} {% block
+content %}
+
+<img
+  src="data:image/png;base64,{{graph}}"
+  class="rounded mx-auto mt-5 d-block"
+/>
+
+<div class="container-fluid news-content">
+  <h3 class="mt-5 text-success-emphasis">
+    Recent News
+    <hr />
+  </h3>
+  {% for news in news_data %}
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="{{news['image_url']}}"
+          class="img-fluid rounded-start"
+          style="max-height: 210px"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{news['title']}}</h5>
+          <p class="card-text">{{news['description']}}</p>
+          <a
+            href="{{news['url']}}"
+            class="btn btn-success float-end mb-3"
+            target="_blank"
+            >News Article...</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
